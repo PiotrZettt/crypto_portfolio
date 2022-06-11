@@ -123,7 +123,13 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/4.0/howto/static-files/
 
 STATIC_URL = 'static/'
-STATI_ROOT = STATIC_ROOT = BASE_DIR / 'staticfiles'
+STATIC_DIRS = [BASE_DIR / 'cryptoApp/static/']
+STATIC_ROOT = 'static_root'
+
+STATICFILES_FINDERS = (
+'django.contrib.staticfiles.finders.AppDirectoriesFinder',
+'django.contrib.staticfiles.finders.FileSystemFinder',
+)
 
 STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 
