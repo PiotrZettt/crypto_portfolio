@@ -1,0 +1,4 @@
+keys.py
+venv
+*.pyc
+db.sqlite3

@@ -1,0 +1,14 @@
+{% extends 'cryptoApp/base_generic.html' %}
+
+{% block title %}<title>Home</title>{% endblock %}
+
+{% block content %}
+  <h1 style="text-align:center">Portfolio</h1>
+    <p>You have:</p>
+    {% for item in assets %}
+
+      <p> {{ item.available }} of {{ item.asset }}  at {{ item.price }}USDT, which amounts to {{ item.current_value }}USDT</p>
+
+    {% endfor %}
+    <p>Your portfolio is worth {{ worth }}USDT</p>
+{% endblock %}

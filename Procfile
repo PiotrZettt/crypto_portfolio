@@ -1,0 +1,1 @@
+web: gunicorn CryptoPortfolio.wsgi

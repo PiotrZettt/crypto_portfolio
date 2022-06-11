@@ -1,0 +1,24 @@
+{% extends 'cryptoApp/base_generic.html' %}
+
+{% block content %}
+
+
+<div style="margin-left: 150px">
+  <h3 class="main-title">Crypto Portfolio</h3>
+  <h5>Login</h5>
+  <form method="post">
+
+    {% csrf_token %}
+    {{ form.as_p}}
+    <div>
+      <row>
+
+      <button type="submit" class="btn-primary">Login</button>
+      <a href="{% url 'register' %}" style="margin-left: 50px"> Sign UP</a>
+      </row>
+    </div>
+  </form>
+</div>
+
+
+{% endblock %}
